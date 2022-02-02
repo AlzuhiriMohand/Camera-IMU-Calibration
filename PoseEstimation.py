@@ -97,7 +97,7 @@ markerLength = 3.643  # Here, our measurement unit is cm.
 markerSeparation = markerLength/5   # Here, our measurement unit is inches.
 board = cv2.aruco.GridBoard_create(4, 6, markerLength, markerSeparation, dictionary)
 img = board.draw((200*4,200*6))
-cv2.imshow('o',img)
+#cv2.imshow('o',img)
 save_path='fisheycal_Demo.npz'
 with np.load(save_path) as X:
     K, D= [X[i] for i in ('K','D')]
